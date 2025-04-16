@@ -1,4 +1,12 @@
+import { BrowserRouter, Route, Routes } from "react-router-dom";
+
 const App = () => {
-  return <h2>mixmaster starter</h2>;
+  return (
+    <BrowserRouter>
+      <Routes>
+        <Route path="/" element={<h2>Home Page</h2>} />
+      </Routes>
+    </BrowserRouter>
+  );
 };
 export default App;
