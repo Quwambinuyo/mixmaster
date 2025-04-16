@@ -1,4 +1,4 @@
-import { BrowserRouter, Route, Routes } from "react-router-dom";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
 import {
   Landing,
   Cocktail,
@@ -18,9 +18,13 @@ const App = () => {
     >
       <Routes>
         <Route path="/" element={<HomeLayout />} />
-        <Route path="/about" element={<About />} />
+        <Route path="/about" element={<About />}>
+          <Route path="cocktail" element={<Cocktail />} />
+        </Route>
+        <Route path="*" element={<Error />} />
       </Routes>
     </BrowserRouter>
   );
 };
+
 export default App;
