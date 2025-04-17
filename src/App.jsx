@@ -1,4 +1,5 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { loader as landingLoader } from "./pages/Landing";
 import {
   Landing,
   Cocktail,
